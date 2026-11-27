@@ -53,13 +53,13 @@ void loop() {
     Serial.println(" cm");
 
     // --- LÓGICA DO MOTOR COM TETO SEGURO (MÁXIMO 120) ---
-    if (dist < 30 && dist > 0) {
+    if (dist < 50 && dist > 0) {
       analogWrite(motorVibracall, 100);
     }
-    else if (dist >= 30 && dist < 60) {
+    else if (dist >= 50 && dist < 80) {
       analogWrite(motorVibracall, 80);
     }
-    else if (dist >= 60 && dist < 80) {
+    else if (dist >= 80 && dist < 100) {
       analogWrite(motorVibracall, 65);
     }
     else {
